@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKPD - Nakupenda Digital | Arte & Ropa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+        :root {
+            --nkpd-burgundy: #4a0e2e;
+            --nkpd-orange: #f26522;
+            --nkpd-teal: #00a99d;
+            --nkpd-cream: #f9f4ef;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--nkpd-cream);
+            color: var(--nkpd-burgundy);
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #4a0e2e 0%, #8a1c4a 100%);
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .logo-heart {
+            filter: drop-shadow(0 0 8px rgba(242, 101, 34, 0.4));
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .category-pill:hover {
+            background-color: var(--nkpd-orange);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="#">
+                    <img src="images/logo_nkpd.svg" class="w-8 h-8 text-orange-500" alt="Logo Icon" style="width: 150px; height: auto;" />
+                </a>
+                <!--span class="text-2xl font-black tracking-tighter">NKPD</span-->
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-orange-500 transition">Inicio</a>
+                <a href="#coleccion" class="hover:text-orange-500 transition">Colección</a>
+                <a href="#arte" class="hover:text-orange-500 transition">Arte</a>
+                <a href="#nosotros" class="hover:text-orange-500 transition">Nosotros</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="relative p-2">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute top-0 right-0 bg-orange-500 text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                </button>
+                <button class="md:hidden">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-6">
+                <h2 class="text-orange-400 font-bold tracking-[0.3em] uppercase">Nakupenda Digital</h2>
+                <h1 class="text-5xl md:text-7xl font-black leading-tight">ARTE QUE <br> SE VISTE.</h1>
+                <p class="text-lg opacity-90 max-w-md">
+                    Inspirados por la esencia de Venezuela. Diseños únicos que fusionan la cultura visual con el estilo contemporáneo.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <a href="#coleccion" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold transition transform hover:scale-105">Ver Tienda</a>
+                    <a href="#arte" class="border-2 border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition">Galería de Arte</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-orange-500/20 blur-[120px] rounded-full"></div>
+                <img src="image (1).jpg" class="relative z-10 w-full max-w-md rounded-2xl shadow-2xl floating" alt="Franela NKPD Llanos Venezolanos" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories / Featured -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 overflow-x-auto whitespace-nowrap flex gap-4 justify-center no-scrollbar">
+            <button class="category-pill border-2 border-gray-200 px-6 py-2 rounded-full font-bold transition">Todos</button>
+            <button class="category-pill border-2 border-gray-200 px-6 py-2 rounded-full font-bold transition">Franelas</button>
+            <button class="category-pill border-2 border-gray-200 px-6 py-2 rounded-full font-bold transition">Prints de Arte</button>
+            <button class="category-pill border-2 border-gray-200 px-6 py-2 rounded-full font-bold transition">Accesorios</button>
+            <button class="category-pill border-2 border-gray-200 px-6 py-2 rounded-full font-bold transition">Edición Limitada</button>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="coleccion" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl font-black">LA COLECCIÓN</h2>
+                    <p class="text-gray-500">Inspiración regional, estilo global.</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="p-3 border rounded-full hover:bg-gray-100"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="p-3 border rounded-full hover:bg-gray-100"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="image (2).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela El Ávila" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold">Populares</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">Franela "El Ávila"</h3>
+                        <p class="text-gray-400 text-sm mb-4">Serie Paisajes Icónicos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-black">$25.00</span>
+                            <button class="bg-burgundy text-white p-3 rounded-xl bg-[#4a0e2e] hover:bg-orange-500 transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="image (4).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Salto Ángel" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">Franela "Salto Ángel"</h3>
+                        <p class="text-gray-400 text-sm mb-4">Serie Paisajes Icónicos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-black">$25.00</span>
+                            <button class="bg-burgundy text-white p-3 rounded-xl bg-[#4a0e2e] hover:bg-orange-500 transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="image (3).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Los Roques" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">Franela "Los Roques"</h3>
+                        <p class="text-gray-400 text-sm mb-4">Serie Paisajes Icónicos</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-black">$25.00</span>
+                            <button class="bg-burgundy text-white p-3 rounded-xl bg-[#4a0e2e] hover:bg-orange-500 transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden group">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="image.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Camino" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">Nuevo</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">Franela "Senda Digital"</h3>
+                        <p class="text-gray-400 text-sm mb-4">Serie Arte Geométrico</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-black">$28.00</span>
+                            <button class="bg-burgundy text-white p-3 rounded-xl bg-[#4a0e2e] hover:bg-orange-500 transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Gallery Section -->
+    <section id="arte" class="py-20 bg-stone-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="Illustration%20of%20venezuelan_shield(in%20dan%20mumfo)_07-enhanced.jpg" class="rounded-full border-8 border-white/10 shadow-[0_0_50px_rgba(242,101,34,0.3)] animate-spin-slow w-full max-w-lg mx-auto" style="animation: spin 60s linear infinite;" alt="Arte NKPD Escudo">
+                    <style>@keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }</style>
+                </div>
+                <div class="order-1 md:order-2 space-y-8">
+                    <h2 class="text-5xl font-black leading-tight">MÁS QUE ROPA, <br><span class="text-orange-500">ES ARTE DIGITAL.</span></h2>
+                    <p class="text-xl text-gray-400">
+                        Cada diseño comienza como una pieza de arte conceptual. Utilizamos técnicas digitales avanzadas para reinterpretar la simbología tradicional y la naturaleza venezolana.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-lg">
+                            <i class="fa-solid fa-check text-orange-500"></i> Diseños Exclusivos Nakupenda
+                        </li>
+                        <li class="flex items-center gap-4 text-lg">
+                            <i class="fa-solid fa-check text-orange-500"></i> Calidad de Impresión Premium
+                        </li>
+                        <li class="flex items-center gap-4 text-lg">
+                            <i class="fa-solid fa-check text-orange-500"></i> Ediciones Coleccionables
+                        </li>
+                    </ul>
+                    <button class="bg-white text-black px-10 py-4 rounded-full font-bold hover:bg-orange-500 hover:text-white transition">Explorar Galería</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <img src="LOGO NKPD HORZ.jpg" class="h-20 mx-auto mb-8 object-contain" alt="NKPD Logo Horizontal" onerror="this.style.display='none'">
+            <h2 class="text-4xl font-black mb-6">NUESTRA HISTORIA</h2>
+            <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                <strong>NKPD (Nakupenda Digital)</strong> nace de la evolución del arte visual hacia el mundo digital y textil. "Nakupenda" significa "Te quiero" en swahili, una expresión de amor por nuestras raíces, por el color y por la capacidad de conectar a través del diseño.
+            </p>
+            <div class="flex justify-center gap-12">
+                <div>
+                    <div class="text-4xl font-black text-orange-500">+10k</div>
+                    <div class="text-sm font-bold text-gray-400 uppercase">Seguidores</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-orange-500">100%</div>
+                    <div class="text-sm font-bold text-gray-400 uppercase">Original</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-black text-orange-500">VE</div>
+                    <div class="text-sm font-bold text-gray-400 uppercase">Orgullo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black mb-4">ÚNETE A LA TRIBU NKPD</h2>
+            <p class="mb-8 opacity-90">Recibe noticias sobre nuevos lanzamientos y ediciones limitadas.</p>
+            <form class="max-w-md mx-auto flex gap-2">
+                <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-6 py-4 rounded-full text-black focus:outline-none">
+                <button class="bg-[#4a0e2e] px-8 py-4 rounded-full font-bold hover:bg-stone-900 transition">Unirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <a href="#">
+                            <img src="images/logo_nkpd.svg" class="w-8 h-8 text-orange-500" alt="Logo Icon" style="width: 150px; height: auto;" />
+                        </a>
+                        <!--span class="text-2xl font-black">NKPD</span-->
+                    </div>
+                    <p class="text-gray-500 max-w-sm">
+                        Nakupenda Digital - Arte y estilo de vida inspirado en la riqueza visual de Venezuela y el mundo digital.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">SÍGUENOS</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="h-10 w-10 bg-white border flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="h-10 w-10 bg-white border flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="h-10 w-10 bg-white border flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">CONTACTO</h4>
+                    <p class="text-gray-500 text-sm">info@nakupendadigital.com</p>
+                    <p class="text-gray-500 text-sm">Caracas, Venezuela</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t text-center text-sm text-gray-400">
+                <p>Copyright &copy; 2026 NKPD - Nakupenda Digital. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple cart counter mock
+        const addButtons = document.querySelectorAll('button i.fa-plus');
+        const cartCounter = document.querySelector('.bg-orange-500.text-white.text-\\[10px\\]');
+        let count = 0;
+
+        addButtons.forEach(btn => {
+            btn.parentElement.addEventListener('click', () => {
+                count++;
+                cartCounter.innerText = count;
+                btn.parentElement.classList.add('scale-90');
+                setTimeout(() => btn.parentElement.classList.remove('scale-90'), 100);
+            });
+        });
+    </script>
+</body>
+</html>
