@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NKPD - Nakupenda Digital | Arte & Ropa</title>
+
+       <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- Respaldo para navegadores antiguos o sistemas específicos si llegaras a exportarlo -->
+    <link rel="alternate icon" href="images/favicon.ico">
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -101,7 +108,7 @@
             </div>
             <div class="relative flex justify-center">
                 <div class="absolute inset-0 bg-orange-500/20 blur-[120px] rounded-full"></div>
-                <img src="image (1).jpg" class="relative z-10 w-full max-w-md rounded-2xl shadow-2xl floating" alt="Franela NKPD Llanos Venezolanos" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                <img src="products/nkpd-007.jpg" class="relative z-10 w-full max-w-md rounded-2xl shadow-2xl floating" alt="Franela NKPD Llanos Venezolanos" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
             </div>
         </div>
     </section>
@@ -135,7 +142,7 @@
                 <!-- Product 1 -->
                 <div class="product-card bg-white rounded-3xl overflow-hidden group">
                     <div class="h-80 overflow-hidden relative">
-                        <img src="image (2).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela El Ávila" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <img src="products/nkpd-001.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela El Ávila" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold">Populares</div>
                     </div>
                     <div class="p-6">
@@ -153,7 +160,7 @@
                 <!-- Product 2 -->
                 <div class="product-card bg-white rounded-3xl overflow-hidden group">
                     <div class="h-80 overflow-hidden relative">
-                        <img src="image (4).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Salto Ángel" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <img src="products/nkpd-002.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Salto Ángel" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-lg">Franela "Salto Ángel"</h3>
@@ -170,7 +177,7 @@
                 <!-- Product 3 -->
                 <div class="product-card bg-white rounded-3xl overflow-hidden group">
                     <div class="h-80 overflow-hidden relative">
-                        <img src="image (3).jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Los Roques" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <img src="products/nkpd-003.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Los Roques" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
                     </div>
                     <div class="p-6">
                         <h3 class="font-bold text-lg">Franela "Los Roques"</h3>
@@ -187,7 +194,7 @@
                 <!-- Product 4 -->
                 <div class="product-card bg-white rounded-3xl overflow-hidden group">
                     <div class="h-80 overflow-hidden relative">
-                        <img src="image.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Camino" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
+                        <img src="products/nkpd-004.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Franela Camino" onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800'">
                         <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">Nuevo</div>
                     </div>
                     <div class="p-6">
@@ -273,22 +280,37 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-stone-100 py-12">
+
+    <style>
+        footer.bg-stone-100.py-12.footer {
+            background-color: #312330;
+        }
+        img.w-8.h-8.text-orange-500.logo_footer {
+            width: 300px; height: auto;
+            color: #E8E0CE;
+        }
+        p.text-gray-500.max-w-sm.footer {color: #E8E0CE;}
+        h4.font-bold.mb-6.footer {color: #E8E0CE;}
+        p.text-gray-500.text-sm.footer {color: #E8E0CE;}
+        .pt-8.border-t.text-center.text-sm.text-gray-400.footer {color: #E8E0CE; font-size: 12px;}
+    </style>
+
+    <footer class="bg-stone-100 py-12 footer">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
                     <div class="flex items-center gap-2 mb-6">
                         <a href="#">
-                            <img src="images/logo_nkpd.svg" class="w-8 h-8 text-orange-500" alt="Logo Icon" style="width: 150px; height: auto;" />
+                            <img src="images/logo_nkpd_blanco.svg" class="w-8 h-8 text-orange-500 logo_footer" alt="Logo Icon" style="" />
                         </a>
                         <!--span class="text-2xl font-black">NKPD</span-->
                     </div>
-                    <p class="text-gray-500 max-w-sm">
+                    <p class="text-gray-500 max-w-sm footer">
                         Nakupenda Digital - Arte y estilo de vida inspirado en la riqueza visual de Venezuela y el mundo digital.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6">SÍGUENOS</h4>
+                    <h4 class="font-bold mb-6 footer">SÍGUENOS</h4>
                     <div class="flex gap-4">
                         <a href="#" class="h-10 w-10 bg-white border flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="h-10 w-10 bg-white border flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
@@ -296,12 +318,12 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6">CONTACTO</h4>
-                    <p class="text-gray-500 text-sm">info@nakupendadigital.com</p>
-                    <p class="text-gray-500 text-sm">Caracas, Venezuela</p>
+                    <h4 class="font-bold mb-6 footer">CONTACTO</h4>
+                    <p class="text-gray-500 text-sm footer">info@nakupendadigital.com</p>
+                    <p class="text-gray-500 text-sm footer">Caracas, Venezuela | Lima, Perú</p>
                 </div>
             </div>
-            <div class="pt-8 border-t text-center text-sm text-gray-400">
+            <div class="pt-8 border-t text-center text-sm text-gray-400 footer">
                 <p>Copyright &copy; 2026 NKPD - Nakupenda Digital. Todos los derechos reservados.</p>
             </div>
         </div>
